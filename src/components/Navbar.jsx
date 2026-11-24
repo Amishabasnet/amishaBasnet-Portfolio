@@ -3,7 +3,7 @@ function Navbar() {
     return(
         <nav className="navbar">
             <div className="logo">
-                Amisha<span>.</span>
+                Amisha Basnet<span>.</span>
             </div>
 
             <ul className="nav-links">

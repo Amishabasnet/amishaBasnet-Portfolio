@@ -1,18 +1,16 @@
-
 import "./hero.css";
+import profileImage from "../assets/profile.png";
 
 function Hero() {
     return (
         <section className="hero" id="home">
 
-            {/* Hero Image - Left Side */}
             <div className="hero-image">
-                <div className="image-placeholder">
-                    <span>AM</span>
-                </div>
+                    <img src={profileImage} alt="Amisha Basnet" className="profile-img"/>
             </div>
 
-            {/* Hero Content - Right Side */}
+            <p>{String(profileImage)}</p>
+
             <div className="hero-content">
 
                 <p className="hero-tag">

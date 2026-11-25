@@ -1,13 +1,13 @@
-
 import "./Projects.css";
 
 function Projects() {
     const projects = [
         {
             id: 1,
-            title: "ShopEase - E-commerce Website",
+            title: "ShopEase",
+            category: "E-commerce Website",
             description:
-                "A responsive e-commerce application built with React. Users can browse products, search and filter items, manage their shopping cart, add products to wishlist, and complete checkout.",
+                "A responsive e-commerce application built with React. Users can browse products, search and filter items, manage their shopping cart, add products to a wishlist, and complete checkout.",
             technologies: [
                 "React",
                 "JavaScript",
@@ -16,14 +16,13 @@ function Projects() {
                 "Local Storage"
             ],
             github: "https://github.com/Amishabasnet/shopease-frontend",
-            demo: "#"
+            demo: "" // Add your deployed project URL here
         }
     ];
 
     return (
         <section className="projects" id="projects">
             <div className="projects-container">
-
                 <p className="section-tag">MY RECENT WORK</p>
 
                 <h2>
@@ -31,27 +30,35 @@ function Projects() {
                 </h2>
 
                 <p className="projects-description">
-                    Here are some projects I've built while
-                    learning and improving my frontend
-                    development skills.
+                    Here are some projects I've built while learning
+                    and improving my frontend development skills.
                 </p>
 
                 <div className="projects-grid">
                     {projects.map((project) => (
-                        <div className="project-card" key={project.id}>
-
+                        <article className="project-card" key={project.id}>
                             <div className="project-image">
-                                <span>ShopEase</span>
+                                <span className="project-number">01</span>
+                                <span className="project-preview-title">
+                                    ShopEase
+                                </span>
+                                <span className="project-preview-subtitle">
+                                    E-commerce Website
+                                </span>
                             </div>
 
                             <div className="project-info">
+                                <p className="project-category">
+                                    {project.category}
+                                </p>
+
                                 <h3>{project.title}</h3>
 
                                 <p>{project.description}</p>
 
                                 <div className="project-tech">
-                                    {project.technologies.map((tech, index) => (
-                                        <span key={index}>{tech}</span>
+                                    {project.technologies.map((tech) => (
+                                        <span key={tech}>{tech}</span>
                                     ))}
                                 </div>
 
@@ -61,15 +68,23 @@ function Projects() {
                                         target="_blank"
                                         rel="noreferrer"
                                     >
-                                        GitHub
+                                        View Code <span>↗</span>
                                     </a>
+
+                                    {project.demo && (
+                                        <a
+                                            href={project.demo}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            Live Demo <span>↗</span>
+                                        </a>
+                                    )}
                                 </div>
                             </div>
-
-                        </div>
+                        </article>
                     ))}
                 </div>
-
             </div>
         </section>
     );

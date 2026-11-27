@@ -7,7 +7,7 @@ function Projects() {
             title: "ShopEase",
             category: "E-commerce Website",
             description:
-                "A responsive e-commerce application built with React. Users can browse products, search and filter items, manage their shopping cart, add products to a wishlist, and complete checkout.",
+                "A responsive e-commerce application built with React. Users can browse products, search and filter items, manage their shopping cart, add products to a wishlist and complete checkout.",
             technologies: [
                 "React",
                 "JavaScript",
@@ -15,8 +15,22 @@ function Projects() {
                 "React Router",
                 "Local Storage"
             ],
-            github: "https://github.com/Amishabasnet/shopease-frontend",
-            demo: "" // Add your deployed project URL here
+            github: "https://github.com/Amishabasnet/shopease-frontend"
+           
+        },
+
+        { 
+            id: 2,
+            title: "ToDoList",
+            category: "Task management system",
+            description: "A task management app built with React. Users can add taks, mark tasks as completed, edit task names and delete tasks.",
+            technologies: [
+                "React",
+                "Javascript",
+                "CSS",
+                "useState"
+            ],
+            github: "https://github.com/Amishabasnet/todolist"
         }
     ];
 
@@ -37,15 +51,6 @@ function Projects() {
                 <div className="projects-grid">
                     {projects.map((project) => (
                         <article className="project-card" key={project.id}>
-                            <div className="project-image">
-                                <span className="project-number">01</span>
-                                <span className="project-preview-title">
-                                    ShopEase
-                                </span>
-                                <span className="project-preview-subtitle">
-                                    E-commerce Website
-                                </span>
-                            </div>
 
                             <div className="project-info">
                                 <p className="project-category">

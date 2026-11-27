@@ -9,8 +9,6 @@ function Hero() {
                     <img src={profileImage} alt="Amisha Basnet" className="profile-img"/>
             </div>
 
-            <p>{String(profileImage)}</p>
-
             <div className="hero-content">
 
                 <p className="hero-tag">
